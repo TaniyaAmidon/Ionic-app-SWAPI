@@ -1,1 +1,43 @@
+.login-page {
+    .background {
+     background-color: #DFE2EB !important;
+    }
+    ion-card-header {
+        font-size: 32px ;
+        text-align: center;
+        color: #1E2636;
+        margin-top: 48px;
+    }
+    .facebook-logo {
+        font-size: 32px;
+    }
+    .large-empty-avatar {
+        font-size: 100px;
+        color: #1E2636;
+    }
+    #forgot-password {
+        text-align: right;
+        color: #1E2636;
+        opacity: 0.6;
+    }
 
+    #sign-in {
+        text-align: center;
+        padding-top: 20px;
+        color: #1E2636;
+        font-size: 16px;
+    }
+    div {
+        text-align: center;
+    }
+    ion-button {
+        margin-left: 24px;
+    }
+
+    .passwordIcon{
+        font-size:24px;
+        position: relative !important;
+        margin: 0 auto !important;
+     }
+
+}
