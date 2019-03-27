@@ -7,9 +7,9 @@ import data from '../items.json';
   styleUrls: ['./list.page.scss'],
 })
 export class ListPage implements OnInit {
-  
+  items :any
   constructor() {
-    console.log(data);
+    this.items = data.items;
   }
 
   ngOnInit() {

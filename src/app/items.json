@@ -1,24 +1,28 @@
 { 
   "items" : [
         {
-          "picture": "picture",
+          "id": "1",
+          "picture": "https://imgix.ranker.com/user_node_img/33/642088/original/bulbasaur-photo-u26?w=120&h=120&q=60&fm=pjpg&fit=crop&crop=faces",
           "title": "Bulbasaur",
           "subtitle": "Generation 1: Grass, Poison",
           "text":"Bulbasaur can be seen napping in bright sunlight."
         },
         {
+          "id": "2",
           "picture": "a picture",
           "title": "Charmander",
           "subtitle": "Generation 1: Fire",
           "text": "The flame that burns at the tip of its tail is an indication of its emotions."
         },
         {
+          "id": "3",
           "picture": "a picture",
           "title": "Squirtle",
           "subtitle": "Generation 1: Water",
           "text": "Squirtle's shell is not merely used for protection"
         },
         {
+          "id": "4",
           "picture": "a picture",
           "title": "Pikachu",
           "subtitle": "Generation 1: Electric",
