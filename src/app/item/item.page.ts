@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 import data from '../items.json';
 
 @Component({
@@ -9,12 +10,22 @@ import data from '../items.json';
 
 export class ItemPage implements OnInit {
   items :any
-  constructor() { 
-    this.items = data.items.id;
-    
+  pokemon :any
+  selectedId :string
+  
+  constructor(private route: ActivatedRoute) { 
+    this.items = data.items;
   }
-    
+
   ngOnInit() {
+    this.route.params.subscribe(params => {
+      this.selectedId = params['id'];
+    });
+    this.items.forEach(item => {
+      if (item.id == this.selectedId) {
+        this.pokemon = item;
+      } 
+    });
   }
 
 }
