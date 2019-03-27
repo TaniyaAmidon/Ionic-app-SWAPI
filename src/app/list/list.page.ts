@@ -10,7 +10,7 @@ export class ListPage implements OnInit {
   constructor() {
     this.data = [
       {
-        picture: "a picture",
+        picture: "picture",
         title: "Bulbasaur",
         subtitle: "Generation 1: Grass, Poison",
         text:"Bulbasaur can be seen napping in bright sunlight."

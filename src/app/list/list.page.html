@@ -1,7 +1,7 @@
 <ion-content color="light" scroll="false" has-header="true" list-page>
     <ion-header>
     <ion-toolbar color="light">
-      <ion-title color="dark" class="ion-text-center">Logo</ion-title>
+      <ion-title color="dark" class="ion-text-center">List of Pokemons</ion-title>
     </ion-toolbar>
   </ion-header>
 
@@ -10,15 +10,14 @@
           <ion-label>
             <ion-card>
               <ion-card-header>
-                <!-- <ion-card-subtitle>Card Subtitle</ion-card-subtitle> -->
-                <!-- <ion-img [src]="https://images.unsplash.com/photo-1497124401559-3e75ec2ed794?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80"></ion-img> -->
+                <ion-img [src]></ion-img>
                 <ion-card-title>{{ d.title }}</ion-card-title>
-
+                <ion-card-subtitle>{{ d.subtitle }}</ion-card-subtitle>
               </ion-card-header>
-                
               <ion-card-content>
                 {{ d.text }}
               </ion-card-content>
+              <ion-button shape="round" fill="solid" color="dark" routerLink="/list" routerDirection="root">Find out more</ion-button> 
             </ion-card>
           </ion-label>
       </ion-item>
