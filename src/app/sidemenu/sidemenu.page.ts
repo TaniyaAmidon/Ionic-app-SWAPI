@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router, RouterEvent } from '@angular/router';
 
 @Component({
   selector: 'app-sidemenu',
@@ -7,7 +8,24 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SidemenuPage implements OnInit {
 
-  constructor() { }
+  pages = [
+    {
+      title: 'List',
+      url: '/list'
+    },
+    {
+      title: 'Item',
+      url: '/item'
+    }
+  ];
+
+  selectedPath = '';
+
+  constructor(private router: Router) {
+    this.router.events.subscribe((event:RouterEvent) => {
+      this.selectedPath =  event.url;
+    });
+   }
 
   ngOnInit() {
   }
