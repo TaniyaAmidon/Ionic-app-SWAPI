@@ -1,10 +1,7 @@
-<ion-content color="light" scroll="false" has-header="true" list-page>
+<ion-content color="light" scroll="false" has-header="true" class="list-page">
     <ion-header>
     <ion-toolbar color="light">
-        <ion-button routerLink="/sidemenu" routerDirection="root">
-            <ion-icon name="menu"></ion-icon>
-        </ion-button> 
-      <ion-title color="dark" class="ion-text-center">List of Pokemons</ion-title>
+      <ion-title color="dark"><ion-icon name="menu" routerLink="/sidemenu" routerDirection="root" id="menu-icon"></ion-icon> <ion-text>List of Pokemons</ion-text></ion-title>
     </ion-toolbar>
   </ion-header>
 
@@ -18,9 +15,8 @@
                 <ion-card-subtitle>{{ d.subtitle }}</ion-card-subtitle>
               </ion-card-header>
               <ion-card-content>
-                {{ d.text }}
+              <ion-button shape="round" fill="outline" color="dark" [routerLink]="'/item/' + d.id" routerDirection="root">Find out more</ion-button>                
               </ion-card-content>
-              <ion-button shape="round" fill="solid" color="dark" [routerLink]="'/item/' + d.id" routerDirection="root">Find out more</ion-button> 
             </ion-card>
           </ion-label>
       </ion-item>
