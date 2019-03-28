@@ -1,18 +1,26 @@
-<ion-content color="light" scroll="false" has-header="true" class="list-page">
-    <ion-header>
+<ion-content scroll="false" has-header="true" class="list-page">
+  <ion-header>
     <ion-toolbar color="light">
-      <ion-title color="dark"><ion-icon name="menu" routerLink="/sidemenu" routerDirection="root" id="menu-icon"></ion-icon> <ion-text>List of Pokemons</ion-text></ion-title>
+      <ion-title><ion-icon name="menu" routerLink="/sidemenu" routerDirection="root" id="menu-icon"></ion-icon> <ion-text>List of Pokemons</ion-text></ion-title>
     </ion-toolbar>
   </ion-header>
-
+<ion-content>
   <ion-list *ngFor="let d of items; let i = index">
       <ion-item>
           <ion-label>
-            <ion-card>
+            <ion-card [routerLink]="'/item/' + d.id" routerDirection="root">
               <ion-card-header>
-                <ion-img [src]="d.picture"></ion-img>
-                <ion-card-title>{{ d.title }}</ion-card-title>
-                <ion-card-subtitle>{{ d.subtitle }}</ion-card-subtitle>
+                <ion-grid>
+                  <ion-row>
+                    <ion-col>
+                      <ion-img class="picture" [src]="d.picture"></ion-img>
+                    </ion-col>
+                    <ion-col>
+                      <ion-card-title>{{ d.title }}</ion-card-title>
+                      <ion-card-subtitle>{{ d.subtitle }}</ion-card-subtitle>
+                    </ion-col>
+                  </ion-row>
+                </ion-grid>      
               </ion-card-header>
               <ion-card-content>
               <ion-button shape="round" fill="outline" color="dark" [routerLink]="'/item/' + d.id" routerDirection="root">Find out more</ion-button>                
@@ -21,5 +29,5 @@
           </ion-label>
       </ion-item>
     </ion-list>
-    
+ </ion-content>   
 </ion-content>

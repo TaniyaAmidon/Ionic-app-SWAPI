@@ -8,5 +8,20 @@
         font-size: 32px;
         color: #1E2636;
     }
+   .picture {
+       width: 100px;
+       height: 100px;
+   }
+   ion-content{
+    --ion-background-color:#F4F5F8;
+    }
+
+    ion-card {
+        background-color:#ffff;
+    }
+    ion-card:hover {
+        opacity: 0.8;
+    }
+
 }
 
