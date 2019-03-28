@@ -1,23 +1,13 @@
-<ion-split-pane>
-  <ion-menu contentId="content">
-    <ion-header>
+<ion-content>
+  <ion-header>
       <ion-toolbar>
-        <ion-title>
-          hello
-        </ion-title>
+        <ion-title>Menu</ion-title>
       </ion-toolbar>
-    </ion-header>
-    <ion-content>
-      <ion-list>
-          <ion-menu-toggle auto-hide="false" *ngFor="let p of pages"> 
-              <ion-item [routerLink]="p.url" routerDirection="root">
-                {{p.title}}
-              </ion-item>
-          </ion-menu-toggle>
-      </ion-list>
-     
-    </ion-content>
-  </ion-menu>
-
-  <ion-router-outlet id="content" main></ion-router-outlet>
-</ion-split-pane>
+    </ion-header>  
+  <ion-list>
+      <ion-menu-toggle auto-hide="false"> 
+          <ion-item routerLink="/list" routerDirection="root">All Pokemons</ion-item>     
+          <ion-item routerLink="/home" routerDirection="root">Sign in</ion-item> 
+      </ion-menu-toggle>
+  </ion-list>    
+</ion-content>

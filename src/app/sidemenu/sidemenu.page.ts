@@ -8,23 +8,23 @@ import { Router, RouterEvent } from '@angular/router';
 })
 export class SidemenuPage implements OnInit {
 
-  pages = [
-    {
-      title: 'List',
-      url: '/list'
-    },
-    {
-      title: 'Item',
-      url: '/item'
-    }
-  ];
+  // pages = [
+  //   {
+  //     title: 'List',
+  //     url: '/list'
+  //   },
+  //   {
+  //     title: 'Item',
+  //     url: '/item'
+  //   }
+  // ];
 
-  selectedPath = '';
+  // selectedPath = '';
 
-  constructor(private router: Router) {
-    this.router.events.subscribe((event:RouterEvent) => {
-      this.selectedPath =  event.url;
-    });
+  constructor() {
+    // this.router.events.subscribe((event:RouterEvent) => {
+    //   this.selectedPath =  event.url;
+    // });
    }
 
   ngOnInit() {
