@@ -1,8 +1,11 @@
 <ion-header>
     <ion-toolbar color="light">
-      <ion-title color="dark" class="ion-text-center">Pokemon name</ion-title>
+        <ion-button routerLink="/sidemenu" routerDirection="root">
+            <ion-icon name="menu"></ion-icon>
+        </ion-button> 
+    <ion-title color="dark" class="ion-text-center">{{ pokemon.title }}</ion-title>
     </ion-toolbar>
-</ion-header>
+</ion-header> 
 
 <ion-content>
     <ion-card>
