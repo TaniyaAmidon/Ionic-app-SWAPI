@@ -1,0 +1,27 @@
+.list-page{
+    #menu-icon {
+     font-size: 24px;
+     margin-right: 40px;
+     color: #1E2636;
+    }
+    ion-text {
+        font-size: 32px;
+        color: #1E2636;
+    }
+   .item-picture {
+       width: 100px;
+       height: 100px;
+   }
+   ion-content{
+    --ion-background-color:#F4F5F8;
+    }
+
+    ion-card {
+        background-color:#ffff;
+    }
+    ion-card:hover {
+        opacity: 0.8;
+    }
+
+}
+
