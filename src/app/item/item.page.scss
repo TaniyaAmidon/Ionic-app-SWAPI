@@ -1,0 +1,31 @@
+.item-page {
+    #menu-icon {
+        font-size: 24px;
+        margin-right: 80px;
+        color: #1E2636;
+   } 
+   ion-text {
+    font-size: 32px;
+    color: #1E2636;
+   }
+   ion-card {
+       background-color: #fff;
+       padding: 10px;
+   }
+
+   .item-picture {
+       width: 300px;
+       height: 250px;
+   }
+
+   ion-card-subtitle {
+       font-size: 18px;
+   }
+
+   ion-card-content {
+       padding-left:0;
+       color: rgb(52, 52, 52);
+       font-size: 18px;
+   }
+
+}

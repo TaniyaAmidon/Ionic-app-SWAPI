@@ -1,20 +1,18 @@
-<ion-header>
-    <ion-toolbar color="light">
-        <ion-button routerLink="/sidemenu" routerDirection="root">
-            <ion-icon name="menu"></ion-icon>
-        </ion-button> 
-    <ion-title color="dark" class="ion-text-center">{{ pokemon.title }}</ion-title>
-    </ion-toolbar>
-</ion-header> 
+<ion-content class="item-page">
+    <ion-header>
+            <ion-toolbar color="light">
+            <ion-title><ion-icon name="menu" routerLink="/sidemenu" routerDirection="root" id="menu-icon"></ion-icon> <ion-text>{{ pokemon.title }}</ion-text></ion-title>        
+            </ion-toolbar>
+        </ion-header> 
 
-<ion-content>
-    <ion-card>
-        <ion-card-header>
-          <ion-img [src]="pokemon.picture"></ion-img>
-          <ion-card-title>{{ pokemon.title }}</ion-card-title>
-          <ion-card-subtitle>{{ pokemon.subtitle }}</ion-card-subtitle>
-        </ion-card-header>
-        <ion-card-content>{{ pokemon.text }}</ion-card-content>
-      </ion-card>
-      <ion-button shape="round" fill="solid" color="dark" routerLink="/list" routerDirection="root">All pokemons</ion-button> 
+        <ion-content color="light" padding>
+            <ion-card>
+                <ion-card-header>
+                        <ion-img [src]="pokemon.picture" class="item-picture"></ion-img>
+                </ion-card-header>
+                <ion-card-subtitle>{{ pokemon.subtitle }}</ion-card-subtitle>
+                <ion-card-content> {{ pokemon.text }}</ion-card-content>
+                <ion-button shape="round" fill="outline" color="dark" routerLink="/list" routerDirection="root">Back</ion-button> 
+            </ion-card>
+        </ion-content>
 </ion-content>
