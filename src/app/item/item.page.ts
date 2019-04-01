@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import data from '../items.json';
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-item',
@@ -9,23 +9,24 @@ import data from '../items.json';
 })
 
 export class ItemPage implements OnInit {
-  items :any
-  pokemon :any
+  url="https://swapi.co/api/people/"
+  item :any  
   selectedId :string
   
-  constructor(private route: ActivatedRoute) { 
-    this.items = data.items;
+  constructor(private route: ActivatedRoute, private http: HttpClient) { 
+    
   }
 
   ngOnInit() {
     this.route.params.subscribe(params => {
       this.selectedId = params['id'];
     });
-    this.items.forEach(item => {
-      if (item.id == this.selectedId) {
-        this.pokemon = item;
-      } 
+    this.getPeople(this.selectedId).subscribe(data => {
+      this.item = data;
     });
   }
 
+  getPeople(id){
+    return this.http.get(`${this.url}`+ id);
+  }
 }

@@ -1,17 +1,34 @@
 <ion-content class="item-page">
     <ion-header>
             <ion-toolbar color="light">
-            <ion-title><ion-icon name="menu" routerLink="/sidemenu" routerDirection="root" id="menu-icon"></ion-icon> <ion-text>{{ pokemon.title }}</ion-text></ion-title>        
+            <ion-title><ion-icon name="menu" routerLink="/sidemenu" routerDirection="root" id="menu-icon"></ion-icon> <ion-text>{{ item.name }}</ion-text></ion-title>        
             </ion-toolbar>
         </ion-header> 
 
         <ion-content color="light" padding>
             <ion-card>
                 <ion-card-header>
-                        <ion-img [src]="pokemon.picture" class="item-picture"></ion-img>
+                    <ion-card-content>{{item.name}}</ion-card-content>
                 </ion-card-header>
-                <ion-card-subtitle>{{ pokemon.subtitle }}</ion-card-subtitle>
-                <ion-card-content> {{ pokemon.text }}</ion-card-content>
+                
+                <ion-card-content> 
+                    <ion-list>
+                        <ion-item>
+                            {{"Birth year"}}: {{ item.birth_year }}
+                        </ion-item>
+                        <ion-item>
+                            {{"Height"}}: {{ item.height }}
+                        </ion-item>
+                        <ion-item>
+                            {{"Gender"}}: {{ item.gender }}
+                        </ion-item>
+                        <ion-item>
+                            {{"Eye-Color"}}: {{item.eye_color}}
+                        </ion-item>         
+                    </ion-list>
+                    
+
+                </ion-card-content>
                 <ion-button shape="round" fill="outline" color="dark" routerLink="/list" routerDirection="root">Back</ion-button> 
             </ion-card>
         </ion-content>

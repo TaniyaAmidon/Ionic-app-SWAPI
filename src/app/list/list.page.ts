@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import data from '../items.json';
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-list',
@@ -8,8 +8,16 @@ import data from '../items.json';
 })
 export class ListPage implements OnInit {
   items :any
-  constructor() {
-    this.items = data.items;
+  url="https://swapi.co/api/people/"
+
+  constructor(private http: HttpClient) {
+    this.getPeople().subscribe(data => {
+      this.items = data["results"];
+    });
+  }
+
+  getPeople(){
+    return this.http.get(`${this.url}`);
   }
 
   ngOnInit() {
