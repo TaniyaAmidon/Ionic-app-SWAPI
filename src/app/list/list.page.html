@@ -8,7 +8,7 @@
   <ion-list *ngFor="let d of items; let i = index">
       <ion-item>
           <ion-label>
-            <ion-card [routerLink]="'/item/' + i+1" routerDirection="root">
+            <ion-card [routerLink]="'/item/' + (i +1)" routerDirection="root">
               <ion-card-header>
                 <ion-grid>
                   <ion-row>
